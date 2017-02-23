@@ -9,34 +9,11 @@ url:
 # Change to `true` before pushing live site.
 public: false
 
-# Siteleaf requires a specific directory structure
-# for uploads, posts and pages. Collection & default
-# settings match those requirements. 
-collections:
-  posts:
-    posts:
-      # Edit title to change Siteleaf menuitem name
-      # Change permalink style in defaults below 
-      # for posts only
-      title: Articles
-  uploads:
-    title: Uploads
-    output: true
-    permalink: "/media/:path"
-
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    permalink: "/path/to/post/:title/"
-
 # Social media & contact
-email: info@metroideas.org
-twitter: thinkmetro
-facebook: metroideas
-github: metroideas
-instagram: metroideas
+email: hello@metroideaslab.org
+twitter: metroideaslab
+facebook: metroideaslabpluscoffee
+instagram: metroideaslab
 
 # Build settings
 include: 
