@@ -24,22 +24,28 @@ $serif: "Swift Neue LT W01", Georgia, "Times New Roman", serif;
 // Typography
 $base-font-size: 16px;
 $tablet-base-font-size: 18px;
-$base-line-height: 1.5;
+$base-line-height: 2;
 $header-line-height: 1.1;
 $default-spacing: 1.25rem;
-$small-font-size: 0.8rem;
+$small-font-size: floor(0.8rem);
+
+$h1-font-size: 2rem;
+$h2-font-size: 1.6rem; 
+$h3-font-size: 1.3rem;
+
+$default-input-height: $h1-font-size;
 
 // Media queries
+$small: 540px;
 $tablet: 768px;
-$desktop: 1280px;
+$desktop: 1024px;
 
 // MIP brand
-$black: #252525;
+$black: #0a0a0a;
 $white: #ffffff;
-$gray: #6d6e70;
-$navy: #1e3567;
-$blue: #0060ae;
-$meta-gray: #bcbec0;
+$gray: #e5e4e4;
+$blue: #55a7f7;
+$yellow: #e5e4e4;
 
 /**
  * Base
@@ -79,6 +85,10 @@ h6 {
   line-height: $header-line-height;
 }
 
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+
 small {
   font-size: $small-font-size;
 }
@@ -87,7 +97,7 @@ a {
   color: $blue;
 
   &:visited {
-    color: $navy;
+    color: darken($blue, 35%);
   }
 }
 
@@ -105,7 +115,7 @@ button              { /* TBD */ }
  **/
 main,
 header[role="banner"],
-footer[role="contentinfo"] {
+footer {
   @include padding(1rem);
 }
 
