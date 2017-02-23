@@ -1,10 +1,104 @@
 ---
-title: Homepage
 layout: default
 permalink: "/"
 ---
 
-<h1>{{ page.name }}</h1>
+<header class="full-width hero" id="hero">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>  
+</header>
 
-<p>This page is located in the project's _pages/ directory. Use that directory for other standalone static files, such as 404.html, robots.txt, etc.</p>
-<p>The `watch` task ignores most files located in the project root.</p>
+<article class="large-width visit" id="visit">
+  <img src="http://placehold.it/1024x384" alt="Placeholder images">
+  <section class="small-width">
+    <h2>Pop in for a visit</h2>
+  
+    <p>Come grab a cup of coffee in our Highland Park cafe. We would love to meet you and tell you a little bit about our work. We have plenty of work space and greenery. We think it's a pretty cool place to do some big thinking or just to kick back and relax.</p>
+    
+    <div class="location">
+      <h3>Location</h3>
+      <p>
+        1216 E. Main St., Suite 102<br>
+        Chattanooga, TN 37408<br>
+        <a href="https://www.google.com/maps/place/1216+E+Main+St+%23102,+Chattanooga,+TN+37408/@35.0289869,-85.2911864,17z/data=!3m1!4b1!4m5!3m4!1s0x88605de6bf9e0193:0x536956b9164e4321!8m2!3d35.0289869!4d-85.2889977">Map</a>
+      </p>  
+    </div>
+
+    <div class="hours">
+      <h3>Hours</h3>
+      <ul>
+        <li>Monday: 7 a.m. to 3 p.m.</li>
+        <li>Tuesday: 7 a.m. to 3 p.m.</li>
+        <li>Wednesday: 7 a.m. to 3 p.m.</li>
+        <li>Thursday: 7 a.m. to 3 p.m.</li>
+        <li>Friday: 7 a.m. to 3 p.m.</li>
+        <li>Saturday: Closed</li>
+        <li>Sunday: Closed</li>
+      </ul>
+    </div>   
+  </section>
+</article>
+
+<article class="large-width events" id="events">
+  <img src="http://placehold.it/1024x384" alt="Placeholder images">
+  <section class="small-width">
+    <h2>Upcoming events</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur id ullam, fugiat esse nostrum eum libero reprehenderit. Iure ullam quae quisquam magnam modi voluptate, mollitia aspernatur optio sint voluptas consequatur!</p>
+  
+    <ul class="event-calendar">
+      <li class="event">
+        <h3>Wonk Wednesday</h3>
+        <time datetime="">Wednesday, March 22 at 5:30 p.m.</time>
+        <p>The first Wonk Wednesday of 2017 and the first event in the new space! We’re really excited to be hosting Chattanooga’s most comprehensive and expansive policy conversation over beer and coffee. Stop by and meet the team, it’s a great time.</p>
+        <a href="#">RSVP</a>
+      </li>
+  
+      <li class="event">
+        <h3>UTC Policy Competition</h3>
+        <time datetime="">Monday, April 3 at 5 p.m.</time>
+        <p>The Metro Ideas Project is proud to be hosting the inaugral policy competition for the University of Tennessee at Chattanooga. Undergraduate students are invited to help create solutions to challenges present in the State of Tennessee. Come see what they come up with.</p>
+        <a href="#">RSVP</a>
+      </li>
+    </ul>
+  
+    <p>
+      <small>
+      <em>Want to host an event in our space? Shoot us an <a href="mailto:{{ site.email }}">email</a>, and we'll get in touch.</em>
+      </small>
+    </p>
+  </section>
+</article>
+
+<article class="medium-width about" id="about">
+  <h2>Our story</h2>
+
+  <p>The Metro Ideas Lab is a collaborative space where governments and communities solve public sector challenges together.  Located in the newly restored Wheelhouse building on East Main Street, we are launching a new home for civic innovators, academics and engaged residents.</p>
+
+  <p>This collaboration starts with the tenants. <a href="http://metroideas.org">Metro Ideas Project</a>, a public-benefit research organization and think tank, will make the lab its headquarters. <a href="http://www.pluscoffee.co">Plus Coffee</a> is opening a satellite shop here to serve nearby workers and residents. Metro Ideas Lab will host policy-focused events, conversations and meetings for residents who want to build a stronger city in 2017.</p>
+</article>
+
+<article class="full-width contact" id="contact">
+  <h2>Contact</h2>
+  <p>While it's easy to just stop by, you can also follow us online:</p>
+
+  <ul class="social">
+    <li><a href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
+    <li><a href="https://facebook.com/{{ site.facebook }}">Facebook</a></li>
+    <li><a href="https://instagram.com/{{ site.instagram }}">Instagram</a></li>
+  </ul>
+
+  <p>For all other inquiries:<br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+</article>
+
+<form action="//metroideas.us11.list-manage.com/subscribe/post?u=f9d7c3f4989701b58fc58c470&amp;id=4f4820accd" method="post" class="full-width mailchimp" id="mailchimp" target="_blank" novalidate>
+
+  <h2>Subscribe to our newsletter</h2>
+
+  <p>Subscribe and get the latest on our content, upcoming events and research from the team.</p>
+
+  <label for="mce-EMAIL" class="visually-hidden">Email address (required)</label>
+  <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email address">
+  <button type="submit">Subscribe</button>
+
+  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f9d7c3f4989701b58fc58c470_4f4820accd" tabindex="-1" value=""></div>
+</form>

@@ -1,8 +1,8 @@
 # Jekyll config
 
-title: Metro Ideas Lab
+title: Metro Ideas Lab + Coffee
 timezone: America/New_York
-description: "We serve coffee, communities and city policy."
+description: "We proudly serve coffee, community and city policy."
 url:
 # site.public boolean used to prevent preview sites from
 # triggering unintended crawls and analytic counts.
