@@ -55,4 +55,4 @@ exclude:
 - npm-debug.log
 
 # API
-google_analytics: UA-XXXXX-Y
+google_analytics: UA-68712194-3
