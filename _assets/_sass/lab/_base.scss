@@ -1,0 +1,18 @@
+/**
+ * Base
+ * + Border box sizing
+ * + Mobile- and tablet-width font sizes
+ **/
+ 
+html {
+  box-sizing: border-box;
+  font-size: $base-font-size;
+
+  @media(min-width: $tablet) {
+    font-size: $tablet-base-font-size;
+  }
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}

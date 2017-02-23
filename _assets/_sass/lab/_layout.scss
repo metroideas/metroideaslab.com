@@ -1,0 +1,9 @@
+/**
+ * Layout
+ **/
+ 
+main,
+header[role="banner"],
+footer {
+  @include padding(1rem);
+}
