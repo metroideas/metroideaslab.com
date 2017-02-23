@@ -18,6 +18,9 @@ $system-font-stack: -apple-system, BlinkMacSystemFont,
     "Ubuntu", "Cantarell", "Fira Sans", 
     "Droid Sans", "Helvetica Neue", sans-serif;
 
+// Swift Neue loaded in separate stylesheet 
+$serif: "Swift Neue LT W01", Georgia, "Times New Roman", serif;
+
 // Typography
 $base-font-size: 16px;
 $tablet-base-font-size: 18px;
@@ -61,7 +64,7 @@ html {
  * Uses rem units
  **/
 body {
-  font-family: $system-font-stack;
+  font-family: $serif;
   font-size: 1rem;
   line-height: $base-line-height;
   color: $black;
