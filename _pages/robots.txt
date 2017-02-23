@@ -1,0 +1,16 @@
+---
+permalink: robots.txt
+---
+{% comment %}
+robots.txt output depends on jekyll.environment and site.public
+{% endcomment %}
+
+# www.robotstxt.org/
+
+{% if jekyll.environment == "production" and site.public %}
+User-agent: *
+Disallow:
+{% else %}
+User-agent: *
+Disallow: *
+{% endif %}

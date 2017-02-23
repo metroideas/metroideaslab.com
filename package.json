@@ -1,0 +1,36 @@
+{
+  "name": "metroideaslab",
+  "version": "0.0.0",
+  "description": "Website for metroideaslab.org",
+  "main": "gulpfile.js",
+  "scripts": {
+    "geminstall": "bundle install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metroideas/metroideaslab.org.git"
+  },
+  "author": "David Morton -- michaeldavidmorton@gmail.com -- @itypewords",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metroideas/metroideaslab.org/issues"
+  },
+  "homepage": "https://github.com/metroideas/metroideaslab.org#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "run-sequence": "^1.2.2",
+    "yargs": "^6.6.0"
+  },
+  "dependencies": {
+    "bourbon": "^5.0.0-beta.7",
+    "normalize.css": "^5.0.0"
+  }
+}

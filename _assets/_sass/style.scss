@@ -1,0 +1,129 @@
+/**
+ * Imports
+ * + normalize.css imported in minified CSS
+ * + Bourbon Sass library
+ **/
+@import "/node_modules/normalize.css/normalize.css";
+@import "../../node_modules/bourbon/core/bourbon";
+/*! mip-starter | MIT License | github.com/metroideas/mip-starter */
+
+/**
+ * Variables
+ **/
+
+// Default system font
+// https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+$system-font-stack: -apple-system, BlinkMacSystemFont, 
+    "Segoe UI", "Roboto", "Oxygen", 
+    "Ubuntu", "Cantarell", "Fira Sans", 
+    "Droid Sans", "Helvetica Neue", sans-serif;
+
+// Typography
+$base-font-size: 16px;
+$tablet-base-font-size: 18px;
+$base-line-height: 1.5;
+$header-line-height: 1.1;
+$default-spacing: 1.25rem;
+$small-font-size: 0.8rem;
+
+// Media queries
+$tablet: 768px;
+$desktop: 1280px;
+
+// MIP brand
+$black: #252525;
+$white: #ffffff;
+$gray: #6d6e70;
+$navy: #1e3567;
+$blue: #0060ae;
+$meta-gray: #bcbec0;
+
+/**
+ * Base
+ * + Border box sizing
+ * + Mobile- and tablet-width font sizes
+ **/
+html {
+  box-sizing: border-box;
+  font-size: $base-font-size;
+
+  @media(min-width: $tablet) {
+    font-size: $tablet-base-font-size;
+  }
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/**
+ * Typography
+ * Uses rem units
+ **/
+body {
+  font-family: $system-font-stack;
+  font-size: 1rem;
+  line-height: $base-line-height;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $header-line-height;
+}
+
+small {
+  font-size: $small-font-size;
+}
+
+a {
+  color: $blue;
+
+  &:visited {
+    color: $navy;
+  }
+}
+
+/**
+ * Forms
+ * TBD: Resets for button, text inputs, fieldset
+ **/
+
+fieldset            { /* TBD */ }
+button              { /* TBD */ }
+#{$all-text-inputs} { /* TBD */ }
+
+/**
+ * Layout
+ **/
+main,
+header[role="banner"],
+footer[role="contentinfo"] {
+  @include padding(1rem);
+}
+
+/**
+ * Utilities
+ **/
+
+// .visually-hidden for invisible but audible elements
+// via http://a11yproject.com/posts/how-to-hide-content/
+.visually-hidden { 
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+} 
+body:hover .visually-hidden a,
+body:hover .visually-hidden input,
+body:hover .visually-hidden button {
+  display: none !important;
+} 

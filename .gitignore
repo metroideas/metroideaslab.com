@@ -1,0 +1,17 @@
+# Jekyll
+_site/
+.sass-cache
+.jekyll-metadata
+
+# Build
+css/
+js/
+bower_components/
+node_modules/
+Gemfile.lock
+
+# Misc
+tmp/
+*.log
+.DS_Store
+
