@@ -1,9 +1,35 @@
 /**
  * Layout
  **/
- 
-main,
+
+@mixin container($max-width, $padding: $default-spacing * 3 $default-spacing) {
+  width: 100%;
+  max-width: $max-width;
+  @include margin(null auto);
+  @include padding($padding);
+}
+
 header[role="banner"],
 footer {
-  @include padding(1rem);
+  @include container(100%, $default-spacing);
+}
+
+.full-width {
+  @include container(100%);
+}
+
+.large-width {
+  @include container($large);
+}
+
+.medium-width {
+  @include container($medium);
+}
+
+.small-width {
+  @include container($small, null);
+
+  @media (min-width: $medium) {
+    @include padding(null $default-spacing * 2);
+  }
 }
