@@ -1,8 +1,65 @@
 /**
- * Forms
- * TBD: Resets for button, text inputs, fieldset
+ * Forms and form elements
  **/
 
-fieldset            { /* TBD */ }
-button              { /* TBD */ }
-#{$all-text-inputs} { /* TBD */ }
+// Resets
+button,
+input[type="email"] {
+  @include margin(0);
+  @include padding(0);
+  // border-color: darken($gray, 15%);
+  border-color: $blue;
+  border-radius: 0;
+  border-width: 1px;
+  border-style: solid;
+  background-color: $white;
+  vertical-align: middle;
+  appearance: none;
+}
+
+// Styles
+form {
+  @include clearfix;
+  text-align: center;
+  background-color: $gray;
+}
+
+button,
+label,
+input[type="email"] {
+  height: $default-input-height;
+  font-family: $serif;
+  font-size: $small-font-size;
+  line-height: 1;
+}
+
+input[type="email"],
+button {
+  @include padding(null $default-spacing / 4);
+}
+
+input[type="email"] {
+  width: 100%;
+}
+
+button { 
+  @include margin($default-spacing / 2 null null);
+  float: left;
+  background-color: $blue;
+  border-color: $blue;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+@media (min-width: $medium) {
+  input[type="email"] {
+    width: $small / 2;
+  }
+
+  button {
+    float: none;
+    @include margin(0);
+    @include padding(null $default-spacing);
+  }
+}
