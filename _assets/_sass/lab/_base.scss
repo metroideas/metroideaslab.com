@@ -16,3 +16,53 @@ html {
 *, *::after, *::before {
   box-sizing: inherit;
 }
+
+body {
+  font-family: $serif;
+  font-size: 1rem;
+  line-height: $base-line-height;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include margin(0);
+  @include padding(0);
+  line-height: $header-line-height;
+  text-align: center;
+}
+
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+
+a {
+  color: $blue;
+
+  &:visited {
+    color: darken($blue, 35%);
+  }
+}
+
+ul {
+  list-style-type: none;
+  @include padding(0);
+}
+
+small,
+time {
+  font-size: $small-font-size;
+}
+
+time {
+  display: block;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
