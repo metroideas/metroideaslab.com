@@ -14,7 +14,7 @@ $serif: "Swift Neue LT W01", Georgia, "Times New Roman", serif;
 
 // Typography
 $base-font-size: 16px;
-$tablet-base-font-size: 18px;
+$medium-font-size: 18px;
 $base-line-height: 2;
 $header-line-height: 1.1;
 $default-spacing: 1.25rem;
@@ -28,8 +28,8 @@ $default-input-height: $h1-font-size;
 
 // Media queries
 $small: 540px;
-$tablet: 768px;
-$desktop: 1024px;
+$medium: 768px;
+$large: 1024px;
 
 // MIP brand
 $black: #0a0a0a;

@@ -8,8 +8,8 @@ html {
   box-sizing: border-box;
   font-size: $base-font-size;
 
-  @media(min-width: $tablet) {
-    font-size: $tablet-base-font-size;
+  @media(min-width: $medium) {
+    font-size: $medium-font-size;
   }
 }
 
