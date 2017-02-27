@@ -2,34 +2,202 @@
  * Layout
  **/
 
-@mixin container($max-width, $padding: $default-spacing * 3 $default-spacing) {
+// Container width, max-width, auto L/R margin
+@mixin container($max-width) {
   width: 100%;
   max-width: $max-width;
   @include margin(null auto);
-  @include padding($padding);
+
+  border: 1px solid $yellow;
+}
+
+// Container defaults
+header {
+  @include container(100%);
+  @include padding($default-spacing);
+}
+
+article {
+  @include container($large);
+  @include padding($default-spacing * 3 $default-spacing);
+}
+
+form {
+  @include container(100%);
+  @include padding($default-spacing * 3 $default-spacing);
 }
 
 header[role="banner"],
 footer {
-  @include container(100%, $default-spacing);
+  display: none;
 }
 
-.full-width {
-  @include container(100%);
+// Section-specific
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  min-height: 320px;
 }
 
-.large-width {
-  @include container($large);
+#visit h3 {
+  text-align: left;
 }
 
-.medium-width {
+#visit .location,
+#visit .hours {
+  @include padding($default-spacing null null);
+}
+
+#about {
   @include container($medium);
 }
 
-.small-width {
-  @include container($small, null);
+#contact {
+  text-align: center;
+}
 
-  @media (min-width: $medium) {
-    @include padding(null $default-spacing * 2);
+// Gray border separates events
+ul.event-calendar {
+  @include padding($default-spacing null null);
+  
+  &:after {
+    content: "";
+    display: block;
+    width: 25%;
+    @include margin(null auto);
+    @include padding(null null $default-spacing);
+    border-top: 2px solid $gray;
+  }
+
+  li {
+    @include padding(null null $default-spacing * 2);
+  }
+
+  li:before {
+    content: "";
+    display: block;
+    width: 25%;
+    @include margin(null auto);
+    @include padding(null null $default-spacing * 2);
+    border-top: 2px solid $gray;
+  }
+
+  a {
+    display: block;
+    text-align: center;
   }
 }
+
+ul.social {
+  display: flex;
+  max-width: $small;
+  justify-content: space-between;
+  @include margin(null auto);
+  @include padding($default-spacing null)
+}
+
+/* Medium display styles */
+@media (min-width: $medium) {
+  
+  // Medium: Larger vert padding
+  form,
+  article {
+    @include padding($default-spacing * 4 null);
+  }
+  
+  // Medium: Fixed navbar
+  header[role="banner"] {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: block;
+    background-color: white;
+  }
+  
+  // Medium: Show footer
+  footer {
+    display: block;
+    @include container(100%);
+    @include padding($default-spacing);
+    background-color: $gray;
+    text-align: center;
+    line-height: 1;
+  }
+
+  // Medium: Change article order
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hero      { order: 0; }
+  #visit     { order: 3; }
+  #events    { order: 4; }
+  #about     { order: 1; }
+  #contact   { order: 5; }
+  #subscribe { order: 2; }
+
+  // Medium: Offset relative position of narrow sections
+  article.wide {
+    @include padding(null null 0);
+  }
+
+  // Medium: Wide image with narrow-width text section
+  article.wide section {
+    position: relative;
+    top: -$default-spacing * 4;
+    @include container($small);
+    @include padding(null $default-spacing * 2);
+    background-color: $white;
+  }
+  
+  // Medium: Narrow header top padding
+  article.wide section h2 {
+    @include padding($default-spacing * 2 null null);
+  }
+  
+  // Medium: Narrow sub-section font size
+  article.wide section h3,
+  article.wide section div,
+  article.wide section ul {
+    font-size: $small-font-size;
+    line-height: 1.75;
+  }
+  
+  // Medium: Taller hero default
+  #hero {
+    min-height: $small;
+  }
+  
+  // Medium: Location and hours floated columns
+  #visit {
+    @include clearfix;
+  }
+    
+  #visit .location {
+    float: left;
+  }
+
+  #visit .hours {
+    float: right;
+  }
+  
+  // Medium: Increase vertical padding
+  ul.event-calendar {
+    @include padding($default-spacing * 2 null null);
+  }
+
+  ul.event-calendar:after {
+    @include padding(null null $default-spacing * 2);
+  }
+
+  ul.event-calendar li,
+  ul.event-calendar li:before {
+    @include padding(null null $default-spacing * 3);
+  }
+}
+
+
