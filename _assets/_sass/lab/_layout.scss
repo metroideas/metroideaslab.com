@@ -120,7 +120,28 @@ ul.social {
     display: block;
     background-color: transparent;
   }
-  
+
+  // Medium: Navbar elements
+  header[role="banner"] .logo {
+    display: block;
+    @include margin($default-spacing null);
+    float: left;
+  }
+
+  header[role="banner"] nav {
+    display: inline-block;
+    float: right;
+  }
+
+  header[role="banner"] nav ul {
+    // float: right;
+  }
+
+  header[role="banner"] nav li {
+    display: inline;
+    @include padding(null null null $default-spacing * 2);
+  }
+
   // Medium: Show footer
   footer {
     display: block;
