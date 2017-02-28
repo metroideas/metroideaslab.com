@@ -27,12 +27,25 @@ form {
   @include padding($default-spacing * 3 $default-spacing);
 }
 
-header[role="banner"],
+nav,
 footer {
   display: none;
 }
 
 // Section-specific
+header[role="banner"] {
+  @include padding(0 null);
+}
+header[role="banner"] .logo {
+  display: block;
+  width: 50%;
+  height: 35px;
+  @include margin($default-spacing null);
+  // background: url(/img/logo-color.png);
+  background: url(/img/logo-color.svg) no-repeat, linear-gradient(transparent, transparent);
+  float: left;
+}
+
 #hero {
   display: flex;
   flex-direction: column;
@@ -114,7 +127,7 @@ ul.social {
   
   // Medium: Fixed navbar
   header[role="banner"] {
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 10;
     display: block;
@@ -124,23 +137,28 @@ ul.social {
   // Medium: Navbar elements
   header[role="banner"] .logo {
     display: block;
+    width: 50%;
+    height: 35px;
     @include margin($default-spacing null);
+    // background: url(/img/logo-color.png);
+    background: url(/img/logo-inverse.svg) no-repeat, linear-gradient(transparent, transparent);
     float: left;
   }
 
-  header[role="banner"] nav {
-    display: inline-block;
-    float: right;
-  }
+  // header[role="banner"] nav {
+  //   display: inline-block;
+  //   float: right;
+  // }
 
-  header[role="banner"] nav ul {
-    // float: right;
-  }
+  // header[role="banner"] nav li {
+  //   display: inline;
+  //   @include padding(null null null $default-spacing * 2);
+  // }
 
-  header[role="banner"] nav li {
-    display: inline;
-    @include padding(null null null $default-spacing * 2);
-  }
+  // header[role="banner"] nav li a {
+  //   color: $white;
+  //   text-decoration: none;
+  // }
 
   // Medium: Show footer
   footer {
