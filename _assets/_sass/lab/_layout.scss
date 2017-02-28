@@ -40,6 +40,8 @@ footer {
   align-items: center;
   height: 75vh;
   min-height: 320px;
+  background: url('http://placehold.it/768x540') no-repeat center center;
+  background-size: cover;
 }
 
 #visit h3 {
@@ -116,7 +118,7 @@ ul.social {
     top: 0;
     z-index: 10;
     display: block;
-    background-color: white;
+    background-color: transparent;
   }
   
   // Medium: Show footer
@@ -170,8 +172,11 @@ ul.social {
   }
   
   // Medium: Taller hero default
+  // Medium: Bigger background image
   #hero {
     min-height: $small;
+    background: url('http://placehold.it/1024x768') no-repeat center center;
+    background-size: cover;
   }
   
   // Medium: Location and hours floated columns
