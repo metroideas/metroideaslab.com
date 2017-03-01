@@ -7,6 +7,16 @@ header[role="banner"] {
   @include padding(0 null);
 }
 
+#hero h1 {
+  @include margin(-3rem null null);
+  color: $white;
+}
+
+#hero h1 object {
+  height: 14px;
+  margin-bottom: 1rem;
+}
+
 // Visit section
 #visit h3 {
   text-align: left;
@@ -19,6 +29,10 @@ header[role="banner"] {
 // About section
 #about {
   @include container($medium);
+}
+
+#about h2 object {
+  height: 33px;
 }
 
 // Contact section
