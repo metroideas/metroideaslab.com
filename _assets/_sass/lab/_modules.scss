@@ -7,10 +7,6 @@ header[role="banner"] {
   @include padding(0 null);
 }
 
-header[role="banner"] nav {
-  display: none;
-}
-
 // Visit section
 #visit h3 {
   text-align: left;
@@ -82,21 +78,6 @@ ul.social {
     display: block;
     background-color: transparent;
   }
-
-  // header[role="banner"] nav {
-  //   display: inline-block;
-  //   float: right;
-  // }
-
-  // header[role="banner"] nav li {
-  //   display: inline;
-  //   @include padding(null null null $default-spacing * 2);
-  // }
-
-  // header[role="banner"] nav li a {
-  //   color: $white;
-  //   text-decoration: none;
-  // }
 
   // Medium: Offset relative position of narrow sections
   article.wide {
