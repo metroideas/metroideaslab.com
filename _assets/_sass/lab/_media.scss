@@ -1,0 +1,65 @@
+/**
+ * Background images, SVG icons and fallbacks
+ */
+
+// Navbar logo
+header[role="banner"] .logo {
+  display: block;
+  width: 100%;
+  height: 35px;
+  @include margin($default-spacing null);
+  background: url(/img/logo-color.png);
+  background: url(/img/logo-color.svg) no-repeat, linear-gradient(transparent, transparent);
+  float: left;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  min-height: 320px;
+  background: url('http://placehold.it/768x540') no-repeat center center;
+  background-size: cover;
+}
+
+ul.social li {
+  width: $h1-font-size;
+  height: $h1-font-size;
+}
+
+ul.social a {
+  display: block;
+}
+
+ul.social a.twitter {
+  content: url('/img/icon-twitter.png');
+  content: url('/img/icon-twitter.svg');
+}
+
+ul.social a.facebook {
+  content: url('/img/icon-facebook.png');
+  content: url('/img/icon-facebook.svg');
+}
+
+ul.social a.instagram {
+  content: url('/img/icon-instagram.png');
+  content: url('/img/icon-instagram.svg');
+}
+
+@media (min-width: $medium) {
+  // Medium: Change navbar logo
+  header[role="banner"] .logo {
+    background: url(/img/logo-inverse.png);
+    background: url(/img/logo-inverse.svg) no-repeat, linear-gradient(transparent, transparent);
+  }
+
+  // Medium: Taller hero default
+  // Medium: Bigger background image
+  #hero {
+    min-height: $small;
+    background: url('http://placehold.it/1024x768') no-repeat center center;
+    background-size: cover;
+  }
+}

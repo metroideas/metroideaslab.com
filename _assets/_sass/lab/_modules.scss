@@ -1,0 +1,145 @@
+/**
+ * Modules: Internal section styles
+ */
+
+// Navbar
+header[role="banner"] {
+  @include padding(0 null);
+}
+
+header[role="banner"] nav {
+  display: none;
+}
+
+// Visit section
+#visit h3 {
+  text-align: left;
+}
+
+#visit div {
+  @include padding($default-spacing null null);  
+}
+
+// About section
+#about {
+  @include container($medium);
+}
+
+// Contact section
+#contact {
+  max-width: 100%;
+  text-align: center;
+  border-top: 1px solid $gray;
+}
+
+// Event calendar
+ul.event-calendar {
+  @include padding($default-spacing null null);
+}
+
+ul.event-calendar li {
+  @include padding(null null $default-spacing * 2);
+}
+
+ul.event-calendar a {
+  display: block;
+  text-align: center;
+}
+
+// Half border separates events
+ul.event-calendar:after,
+ul.event-calendar li:before {
+  content: "";
+  display: block;
+  width: 25%;
+  @include margin(null auto);
+  border-top: 2px solid $gray;
+}
+
+ul.event-calendar:after {
+  @include padding(null null $default-spacing);
+}
+
+ul.event-calendar li:before {
+  @include padding(null null $default-spacing * 2);  
+}
+
+// Social media list
+ul.social {
+  display: flex;
+  max-width: $small / 2;
+  justify-content: space-between;
+  @include margin(null auto);
+  @include padding($default-spacing null)
+}
+
+@media (min-width: $medium) {
+  // Medium: Fixed navbar
+  header[role="banner"] {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    display: block;
+    background-color: transparent;
+  }
+
+  // header[role="banner"] nav {
+  //   display: inline-block;
+  //   float: right;
+  // }
+
+  // header[role="banner"] nav li {
+  //   display: inline;
+  //   @include padding(null null null $default-spacing * 2);
+  // }
+
+  // header[role="banner"] nav li a {
+  //   color: $white;
+  //   text-decoration: none;
+  // }
+
+  // Medium: Offset relative position of narrow sections
+  article.wide {
+    @include padding(null null 0);
+  }
+
+  // Medium: Wide image with narrow-width text section
+  article.wide section {
+    position: relative;
+    top: -$default-spacing * 4;
+    @include container($small);
+    @include padding(null $default-spacing * 2);
+    background-color: $white;
+  }
+
+  // Medium: Narrow header top padding
+  article.wide section h2 {
+    @include padding($default-spacing * 2 null null);
+  }
+  
+  // Medium: Narrow sub-section font size
+  article.wide section h3,
+  article.wide section div,
+  article.wide section ul {
+    font-size: $small-font-size;
+    line-height: 1.75;
+  }
+
+  // Medium: Location and hours floated columns
+  #visit {
+    @include clearfix;
+  }
+    
+  #visit .location {
+    float: left;
+  }
+
+  #visit .hours {
+    float: right;
+  }
+  
+  // Medium: Increase vertical padding
+  ul.event-calendar {
+    @include padding($default-spacing * 2 null null);
+  }
+}
