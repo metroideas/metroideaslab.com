@@ -36,6 +36,7 @@ footer {
 header[role="banner"] {
   @include padding(0 null);
 }
+
 header[role="banner"] .logo {
   display: block;
   width: 50%;
@@ -110,10 +111,34 @@ ul.event-calendar {
 
 ul.social {
   display: flex;
-  max-width: $small;
+  max-width: $small / 2;
   justify-content: space-between;
   @include margin(null auto);
   @include padding($default-spacing null)
+}
+
+ul.social li {
+  width: $h1-font-size;
+  height: $h1-font-size;
+}
+
+ul.social a {
+  display: block;
+}
+
+ul.social a.twitter {
+  content: url('/img/icon-twitter.png');
+  content: url('/img/icon-twitter.svg');
+}
+
+ul.social a.facebook {
+  content: url('/img/icon-facebook.png');
+  content: url('/img/icon-facebook.svg');
+}
+
+ul.social a.instagram {
+  content: url('/img/icon-instagram.png');
+  content: url('/img/icon-instagram.svg');
 }
 
 /* Medium display styles */
@@ -140,7 +165,7 @@ ul.social {
     width: 50%;
     height: 35px;
     @include margin($default-spacing null);
-    // background: url(/img/logo-color.png);
+    // background: url(/img/logo-inverse.png);
     background: url(/img/logo-inverse.svg) no-repeat, linear-gradient(transparent, transparent);
     float: left;
   }
