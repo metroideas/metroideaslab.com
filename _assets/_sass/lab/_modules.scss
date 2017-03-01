@@ -26,6 +26,12 @@ header[role="banner"] {
   @include padding($default-spacing null null);  
 }
 
+#visit div p,
+#visit div ul {
+  @include margin(0 null null);
+}
+
+
 // About section
 #about {
   @include container($medium);
