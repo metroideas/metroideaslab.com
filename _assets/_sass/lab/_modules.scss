@@ -124,3 +124,18 @@ ul.social {
     @include padding($default-spacing * 2 null null);
   }
 }
+
+// Browser upgrade message
+.browserupgrade {
+  @include margin(null null $default-spacing);
+  text-align: center;
+}
+
+// Move navbar when .browserupgrade message appears
+.browserupgrade + header[role="banner"] {
+  position: static;
+}
+
+.browserupgrade + header[role="banner"] > .logo {
+  display: none;
+}
