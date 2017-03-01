@@ -23,6 +23,9 @@ article {
 form {
   @include container(100%);
   @include padding($default-spacing * 3 $default-spacing);
+  @include clearfix;
+  text-align: center;
+  background-color: $tan;
 }
 
 footer {
@@ -31,7 +34,6 @@ footer {
 
 @media (min-width: $medium) {
   // Medium: Larger vert padding
-  form,
   article {
     @include padding($default-spacing * 4 null);
   }
