@@ -24,6 +24,10 @@ header[role="banner"] .logo {
   background-size: cover;
 }
 
+a.icon-down-arrow {
+  display: none;
+}
+
 ul.social li {
   width: $h1-font-size;
   height: $h1-font-size;
@@ -58,8 +62,34 @@ ul.social a.instagram {
   // Medium: Taller hero default
   // Medium: Bigger background image
   #hero {
+    position: relative;
     min-height: $small;
     background: url('http://placehold.it/1024x768') no-repeat center center;
     background-size: cover;
+  }
+
+  a.icon-down-arrow {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    display: block;
+    width: 48px;
+    content: url('/img/icon-down-arrow.svg');
+    transform: translate(-50%,-75%);
+  }
+  
+  // Bouncing icon animation
+  a.icon-down-arrow {
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+  }
+  
+  @keyframes bounce {
+    0%   { transform: translate(-50%, 15%); }
+    50%  { transform: translate(-50%, 0);   }
+    100% { transform: translate(-50%, 15%); }
   }
 }
