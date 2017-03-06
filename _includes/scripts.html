@@ -2,7 +2,8 @@
 Load JavaScript files
 {% endcomment %}
 
-<script src="/js/main.js" async></script>
+<script src="/js/main.js"></script>
+<script>smoothScroll.init();</script>
 
 {% if jekyll.environment == 'production' and site.public %}
 <script>
