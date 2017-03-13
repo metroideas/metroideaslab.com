@@ -3,14 +3,14 @@
 title: Metro Ideas Lab + Coffee
 timezone: America/New_York
 description: "We proudly serve coffee, community and city policy."
-url: "https://metroideaslab.org"
+url: "https://metroideaslab.com"
 # site.public boolean used to prevent preview sites from
 # triggering unintended crawls and analytic counts.
 # Change to `true` before pushing live site.
 public: true
 
 # Social media & contact
-email: hello@metroideaslab.org
+email: hello@metroideaslab.com
 twitter: metroideaslab
 facebook: metroideaslabpluscoffee
 instagram: metroideaslab
