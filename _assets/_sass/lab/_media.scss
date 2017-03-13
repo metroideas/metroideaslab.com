@@ -20,7 +20,10 @@ header[role="banner"] .logo {
   align-items: center;
   height: 75vh;
   min-height: 320px;
-  background: url('http://placehold.it/768x540') no-repeat center center;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.25), 
+      rgba(0, 0, 0, 0.25)
+    ), url('/img/hero-768.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -55,6 +58,7 @@ ul.social a.instagram {
 @media (min-width: $medium) {
   // Medium: Change navbar logo
   header[role="banner"] .logo {
+    height: 45px;
     background: url(/img/logo-inverse.png);
     background: url(/img/logo-inverse.svg) no-repeat, linear-gradient(transparent, transparent);
   }
@@ -64,7 +68,13 @@ ul.social a.instagram {
   #hero {
     position: relative;
     min-height: $small;
-    background: url('http://placehold.it/1024x768') no-repeat center center;
+    height: 100vh;
+    
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.25), 
+      rgba(0, 0, 0, 0.25)
+    ), url('/img/hero-1800.jpg') no-repeat center center;
+    
     background-size: cover;
   }
 
