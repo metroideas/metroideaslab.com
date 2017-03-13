@@ -40,6 +40,10 @@ h1 { font-size: $h1-font-size; }
 h2 { font-size: $h2-font-size; }
 h3 { font-size: $h3-font-size; }
 
+h3 {
+  font-weight: 700;
+}
+
 a {
   color: $blue;
 
@@ -61,6 +65,7 @@ time {
 time {
   display: block;
   text-align: center;
+  font-style: italic;
 }
 
 img {

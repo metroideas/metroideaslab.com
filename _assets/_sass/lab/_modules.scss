@@ -110,6 +110,7 @@ ul.social {
     top: -$default-spacing * 4;
     @include container($small);
     @include padding(null $default-spacing * 2);
+    font-size: $small-font-size;
     background-color: $white;
   }
 
