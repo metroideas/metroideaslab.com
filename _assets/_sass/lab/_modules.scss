@@ -126,6 +126,11 @@ ul.social {
     font-size: $small-font-size;
     line-height: 1.75;
   }
+  
+  // Medium: Event description line height matches paragraphs above
+  article.wide li p {
+    line-height: $base-line-height;
+  }
 
   // Medium: Location and hours floated columns
   #visit {
