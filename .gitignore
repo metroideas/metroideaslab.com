@@ -9,6 +9,7 @@ js/
 bower_components/
 node_modules/
 Gemfile.lock
+package-lock.json
 
 # Misc
 tmp/
